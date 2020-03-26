@@ -1,0 +1,19 @@
+<h1>There are {{ count }} words in your text</h1>
+<a href="{% url 'home' %}">Home</a>
+<h2>Your text is as follows</h2>
+{{ fulltext }}
+<h3>Word Count</h3>
+<p id="counter">
+	{% for word, counted in worddict %}
+	{{ word }} - {{ counted }}
+	<br>
+	{% endfor %}
+</p>
+<!--<script type="text/javascript">
+	var wcnt = "";
+	var x;
+	for( x, y in {{ worddict}}){
+		wcnt += x + y + "<br>";
+	}
+	document.getElementById("counter").innerHTML = wcnt;
+</script>-->
